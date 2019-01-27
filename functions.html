@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions JS</title>
+    <script>
+
+        function firstFunction() {
+            document.write("Fuck off!!");
+        }
+
+        firstFunction();
+
+        document.write("<hr/>");
+
+        function doingSum(x1, x2) {
+            document.write(x1 + x2);
+        }
+
+        doingSum(1, 3);
+
+        document.write("<hr/>");
+
+        function div(a1, a2) {
+            return a1 / a2;
+        }
+
+        var c = div(1, 5);
+        document.write(c);
+
+        document.write("<hr/>");
+
+        //recursion
+
+        function rec(a) {
+            a--;
+            if (a > 1) {
+                rec(a);
+            }
+            document.write(a);
+        }
+
+        rec(5);
+
+        document.write("<hr/>");
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+        function res(callBackFunction, a, b) {
+            var resu = callBackFunction(a, b);
+            document.write(resu + "<br/>");
+        }
+
+        res(add, 4, 5);
+        res(sub, 5, 2);
+
+
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

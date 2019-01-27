@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects JS</title>
+    <script>
+
+        var point = new Object();
+
+        point.x = 5;
+        point.y = 10;
+        point.f = function () {
+            document.write(point.x + point.y + "<br/>");
+        };
+
+        point.f();
+
+        document.write("<hr/>");
+
+
+    //вложенные объекты
+
+        var human = {
+            firstName: "Alex",
+            lastName: "May",
+            occupation: {
+                company: "WOXAPP",
+                position: "Test Engineer",
+            }
+        };
+
+        document.write(human.firstName + "<br/>");
+        document.write(human.occupation.position + "<br/>");
+
+        document.write("<hr/>");
+
+
+        //for in - для перебора всех свойств объекта
+        for (property in human) {
+            document.write(human[property] + "<br/>");
+        }
+
+        if ("company" in human.occupation) {
+            document.write(human.occupation.company + "<br/>");
+        } else {
+            document.write(human.occupation.position + "<br/>");
+        }
+
+        delete human.occupation.company;
+        for (property in human.occupation) {
+            document.write(human.occupation[property] + "<br/>");
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>
