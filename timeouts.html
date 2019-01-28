@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timeouts JS</title>
+    <script>
+
+        function showAlert(){
+            alert("How`s it going?");
+        }
+
+        setTimeout(showAlert, 5000);
+
+        window.onload = function(){
+            var counter = 0;
+            function Count(){
+                counter++;
+                document.getElementById("output").innerHTML = counter;
+            }
+            setInterval(Count, 1000);
+        }
+
+
+
+
+    </script>
+
+</head>
+<body>
+    <p id="output">0</p>
+</body>
+</html>
